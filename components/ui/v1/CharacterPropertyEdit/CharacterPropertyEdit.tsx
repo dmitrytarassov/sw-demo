@@ -11,15 +11,7 @@ import {
 } from "@heroui/modal";
 import React, { useEffect } from "react";
 
-type CharacterPropertyEditProps = {
-  value: string;
-  characterName: string;
-  onChange: (value: string) => void;
-  propertyName: string;
-  isOpen: boolean;
-  onOpen: () => void;
-  onOpenChange: () => void;
-};
+import { CharacterPropertyEditProps } from "@/components/ui/interfaces/CharacterPropertyEditProps";
 
 const CharacterPropertyEdit: React.FC<CharacterPropertyEditProps> = ({
   characterName,

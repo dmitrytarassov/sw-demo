@@ -1,9 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import React from "react";
 
 import EditableCharacterProperty from "@/components/CharacterInfo/EditableCharacterProperty";
-import { title } from "@/components/primitives";
+import CharacterName from "@/components/ui/v1/CharacterName";
 import SimpleTable from "@/components/ui/v1/SimpleTable/SimpleTable";
 import { Character } from "@/types/Character";
 
@@ -12,9 +13,14 @@ type CharacterInfoProps = {
 };
 
 const CharacterInfo: React.FC<CharacterInfoProps> = ({ character }) => {
+  const router = useRouter();
+  function onClose() {
+    router.push("/");
+  }
+
   return (
     <>
-      <h1 className={title()}>{character.properties.name}</h1>
+      <CharacterName name={character.properties.name} onClose={onClose} />
       <SimpleTable
         columns={[
           { key: "key", label: "Param" },
