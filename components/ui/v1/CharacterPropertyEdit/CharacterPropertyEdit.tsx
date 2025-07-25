@@ -8,9 +8,7 @@ import {
   ModalContent,
   ModalFooter,
   ModalHeader,
-  useDisclosure,
 } from "@heroui/modal";
-import { Dialog } from "next/dist/client/components/react-dev-overlay/ui/components/dialog";
 import React, { useEffect } from "react";
 
 type CharacterPropertyEditProps = {
